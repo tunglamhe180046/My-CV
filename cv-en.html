@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyen Tung Lam | Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        :root { --ink:#172033; --muted:#5e6b82; --blue:#2463eb; --blue-dark:#1646ab; --line:#dce4f1; --paper:#fff; --canvas:#edf2fa; }
+        * { box-sizing:border-box; }
+        html { scroll-behavior:smooth; }
+        body { margin:0; background:var(--canvas); color:var(--ink); font:15px/1.58 Inter,Arial,sans-serif; }
+        a { color:inherit; text-decoration:none; }
+        .page { max-width:1120px; margin:36px auto; background:var(--paper); box-shadow:0 14px 40px rgba(33,51,83,.13); }
+        .top { background:linear-gradient(125deg,#173f9c,#2874eb); color:#fff; padding:44px 54px 36px; display:grid; grid-template-columns:132px 1fr auto; gap:30px; align-items:center; }
+        .photo { width:128px; height:128px; border:4px solid rgba(255,255,255,.5); border-radius:50%; overflow:hidden; background:#fff; }
+        .photo img { width:100%; height:100%; object-fit:cover; }
+        h1 { margin:0; font-size:38px; letter-spacing:-1.3px; line-height:1.1; }
+        .headline { margin:8px 0 16px; font-size:17px; font-weight:500; color:#e7efff; }
+        .contact { display:flex; flex-wrap:wrap; gap:7px 20px; font-size:13px; }
+        .contact span { white-space:nowrap; }
+        .contact i { width:17px; }
+        .download { align-self:start; border:1px solid rgba(255,255,255,.7); border-radius:7px; background:transparent; color:#fff; padding:10px 14px; font:600 13px Inter,sans-serif; cursor:pointer; }
+        .download:hover { background:#fff; color:var(--blue-dark); }
+        main { padding:38px 54px 45px; }
+        .summary { font-size:15px; color:#344156; margin:0 0 34px; }
+        .layout { display:grid; grid-template-columns:32% 1fr; gap:42px; }
+        section { margin-bottom:31px; }
+        h2 { margin:0 0 15px; color:var(--blue-dark); font-size:15px; text-transform:uppercase; letter-spacing:1.15px; display:flex; align-items:center; gap:9px; }
+        h2::after { content:""; height:1px; background:var(--line); flex:1; }
+        h3 { margin:0; font-size:15px; line-height:1.35; }
+        .sub { color:var(--blue); margin:3px 0 7px; font-size:13px; font-weight:600; }
+        .date { color:var(--muted); font-size:12px; font-weight:600; letter-spacing:.2px; }
+        .tags { display:flex; flex-wrap:wrap; gap:7px; }
+        .tag { background:#eff4ff; color:#244d9b; border:1px solid #dae6ff; border-radius:4px; padding:4px 8px; font-size:12px; font-weight:500; }
+        .skill-group { margin-bottom:15px; break-inside:avoid; page-break-inside:avoid; }
+        .skill-group strong { display:block; margin-bottom:7px; font-size:13px; }
+        .item { position:relative; padding:0 0 24px 20px; border-left:2px solid var(--line); break-inside:avoid; page-break-inside:avoid; }
+        .item:last-child { padding-bottom:0; }
+        .item::before { content:""; position:absolute; left:-6px; top:4px; width:10px; height:10px; border-radius:50%; background:var(--blue); }
+        .item-head { display:flex; gap:12px; align-items:baseline; justify-content:space-between; }
+        ul { margin:8px 0 0; padding-left:18px; color:#3f4a5c; }
+        li { margin:4px 0; }
+        .project { padding:16px 18px; margin-bottom:12px; border:1px solid var(--line); border-radius:8px; background:#fbfcff; break-inside:avoid; page-break-inside:avoid; }
+        .project p { margin:7px 0 0; color:#3f4a5c; font-size:13px; }
+        .project a { display:inline-block; margin-top:9px; color:var(--blue); font-size:13px; font-weight:600; }
+        .education { margin-bottom:13px; break-inside:avoid; page-break-inside:avoid; }
+        .education p { margin:3px 0 0; color:#3f4a5c; font-size:13px; }
+        footer { padding:17px 54px; background:#172033; color:#dce6f8; font-size:12px; display:flex; justify-content:space-between; }
+        @media (max-width:760px) { .page { margin:0; } .top { padding:34px 24px; grid-template-columns:84px 1fr; gap:18px; } .photo { width:84px; height:84px; } h1 { font-size:29px; } .download { grid-column:1/-1; justify-self:start; } main { padding:30px 24px; } .layout { grid-template-columns:1fr; gap:0; } footer { padding:16px 24px; flex-direction:column; gap:4px; } }
+        @media print { body { background:#fff; } .page { margin:0; max-width:none; box-shadow:none; } .download { display:none; } }
+    </style>
+</head>
+<body>
+    <div class="page" id="cv-content">
+        <header class="top">
+            <div class="photo"><img src="anh.jpg" alt="Nguyen Tung Lam"></div>
+            <div>
+                <h1>NGUYEN TUNG LAM</h1>
+                <p class="headline">Full-stack Software Engineer Intern | AI-assisted Developer</p>
+                <div class="contact">
+                    <span><i class="fa-solid fa-envelope"></i> tunglam07678@gmail.com</span>
+                    <span><i class="fa-solid fa-phone"></i> 0985 469 702</span>
+                    <span><i class="fa-solid fa-location-dot"></i> Hanoi, Vietnam</span>
+                    <span><i class="fa-brands fa-linkedin"></i> linkedin.com/in/nguyen-lam-9a1568375</span>
+                </div>
+            </div>
+            <button class="download" onclick="generatePDF()"><i class="fa-solid fa-file-pdf"></i> Download PDF</button>
+        </header>
+
+        <main>
+            <p class="summary">Aspiring full-stack software engineer with hands-on internship experience in C#, .NET, Unity, ReactJS, SQL, and application development workflows. I use AI thoughtfully as a technical assistant for requirements analysis, documentation, implementation, debugging, and task planning. I am eager to combine strong engineering fundamentals, product thinking, and AI-assisted workflows to help teams deliver reliable software efficiently.</p>
+
+            <div class="layout">
+                <aside>
+                    <section>
+                        <h2>Technical Skills</h2>
+                        <div class="skill-group"><strong>Languages & Frameworks</strong><div class="tags"><span class="tag">Java</span><span class="tag">C#</span><span class="tag">.NET</span><span class="tag">ReactJS</span><span class="tag">HTML/CSS</span><span class="tag">Unity</span><span class="tag">Android Java</span><span class="tag">PHP (basic)</span></div></div>
+                        <div class="skill-group"><strong>Databases & Tools</strong><div class="tags"><span class="tag">SQL</span><span class="tag">MySQL</span><span class="tag">SQL Server</span><span class="tag">SQLite</span><span class="tag">Git</span><span class="tag">Bitbucket</span><span class="tag">Jira</span></div></div>
+                        <div class="skill-group"><strong>AI-assisted Development</strong><div class="tags"><span class="tag">Claude</span><span class="tag">ChatGPT</span><span class="tag">Gemini</span><span class="tag">GitHub Copilot</span><span class="tag">Prompt Engineering</span><span class="tag">Context Engineering</span><span class="tag">MCP Integration</span><span class="tag">AI-assisted Debugging</span></div></div>
+                    </section>
+                    <section>
+                        <h2>Professional Skills</h2>
+                        <div class="tags"><span class="tag">Requirements Analysis</span><span class="tag">Technical Documentation</span><span class="tag">Task Breakdown</span><span class="tag">Automation Testing</span><span class="tag">Team Communication</span><span class="tag">Problem Solving</span></div>
+                    </section>
+                    <section>
+                        <h2>Languages</h2>
+                        <div class="education"><h3>English</h3><p>IELTS 6.5 (2022)</p></div>
+                        <div class="education"><h3>Japanese</h3><p>JLPT N4 (2025)</p></div>
+                    </section>
+                    <section>
+                        <h2>Activities</h2>
+                        <div class="education"><h3>Muay Thai Club</h3><p>Oct 2022 – Aug 2024. Developed fitness, discipline, and teamwork.</p></div>
+                        <div class="education"><h3>BRSE Conference Volunteer</h3><p>Aug 2024. Supported event operations and guest coordination.</p></div>
+                    </section>
+                </aside>
+
+                <div>
+                    <section>
+                        <h2>Experience</h2>
+                        <div class="item">
+                            <div class="item-head"><h3>AI-assisted App Developer Intern</h3><span class="date">Jan 2026 – Aug 2026</span></div>
+                            <div class="sub">Kaopiz Software</div>
+                            <ul>
+                                <li>Trained in secure and effective AI use for software development, including workflow design, prompting, context and token optimization, and model comparison.</li>
+                                <li>Built and evaluated AI-assisted workflows supporting requirements analysis, task decomposition, UI/code implementation, technical-document review, and output validation.</li>
+                                <li>Worked with Unity on application UI, interaction flows, screen logic, and front-end tasks; integrated backend APIs to retrieve and display data.</li>
+                                <li>Processed multilingual content across 18 languages and wrote automation tests for unit, flow, and UI testing.</li>
+                                <li>Used Git, Bitbucket, and Jira in an internship delivery workflow; contributed to workflows that reduced processing time for selected task groups by approximately 30%.</li>
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <div class="item-head"><h3>.NET Intern</h3><span class="date">Aug 2025 – Dec 2025</span></div>
+                            <div class="sub">NIC Global Company</div>
+                            <ul>
+                                <li>Worked in a C#/.NET development environment, learning requirement handling, technical documentation, and internal application tasks.</li>
+                                <li>Reviewed technical materials covering Flutter, XFS, UI design, APIs, business flows, Redis, triggers, import/execute flows, hooks, and subscriptions.</li>
+                                <li>Used AI to understand complex documentation, analyze flows, explain code logic, break down problems, and speed up learning of new technologies.</li>
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <div class="item-head"><h3>Software Development Intern</h3><span class="date">Sep 2024 – Dec 2024</span></div>
+                            <div class="sub">FPT Software Japan</div>
+                            <ul><li>Completed a three-month internship in Japan, collaborating directly with local colleagues.</li><li>Participated in low-code and coding software development activities and career-development workshops for engineers in Japan.</li></ul>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2>Projects</h2>
+                        <article class="project"><h3>JLPT Learning App (TamaNihon)</h3><div class="sub">Android Java · SQLite</div><p><strong>Team Lead.</strong> Designed the database and application architecture, contributed to project-analysis documentation, and developed Japanese vocabulary and grammar learning features.</p><a href="https://github.com/Trangpche170234/TamaNihon" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> View on GitHub</a></article>
+                        <article class="project"><h3>DORM — Dormitory Management System</h3><div class="sub">Spring Boot · ReactJS · MySQL</div><p><strong>Team Lead.</strong> Designed the system and database, built CRUD APIs for student-related requirements, and prepared business and technical analysis documents.</p><a href="https://github.com/SEP390/FE" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> View on GitHub</a></article>
+                        <article class="project"><h3>Job Scan — Job Discovery & Matching Toolkit</h3><div class="sub">Python · Playwright · pandas · Rich</div><p>Built an interactive, human-in-the-loop toolkit that collects company data from ITviec and TopCV, identifies candidate official websites, scores relevant vacancies, and exports Excel/CSV reports. Added a semi-automated application assistant that generates tailored cover-letter drafts and fills supported fields while keeping final submission under user control. Designed the workflow to be agent-ready, so Codex, Claude, and Antigravity can assist with analysis, report review, documentation, and workflow improvement under human review.</p><a href="https://github.com/tunglamhe180046/job-scan" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> View on GitHub</a></article>
+                    </section>
+
+                    <section>
+                        <h2>Education & Certifications</h2>
+                        <div class="education"><div class="item-head"><h3>Bachelor of Software Engineering, FPT University</h3><span class="date">Oct 2022 – Dec 2025</span></div><p>Graduated with Good classification.</p></div>
+                        <div class="education"><h3>Google AI Essentials</h3><p>Certificate covering practical AI use, effective prompting, and AI integration into work processes.</p></div>
+                        <div class="education"><div class="item-head"><h3>AI Passport</h3><span class="date">Apr 2026</span></div><p>Kaopiz Software — passed the AI Passport assessment twice.</p></div>
+                        <div class="education"><div class="item-head"><h3>Information Security Certificate</h3><span class="date">Apr 2026</span></div><p>Kaopiz Software — achieved the maximum score in an assessment of information security, data protection, and safe AI use.</p></div>
+                    </section>
+                </div>
+            </div>
+        </main>
+        <footer><span>Nguyen Tung Lam · Software Engineer</span><span>Hanoi, Vietnam · tunglam07678@gmail.com</span></footer>
+    </div>
+    <script>
+        function generatePDF() {
+            const options = { margin: 0, filename: 'Nguyen-Tung-Lam-CV-English.pdf', image: { type: 'jpeg', quality: 0.98 }, html2canvas: { scale: 2, useCORS: true }, jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }, pagebreak: { mode: ['css', 'legacy'] } };
+            html2pdf().set(options).from(document.getElementById('cv-content')).save();
+        }
+    </script>
+</body>
+</html>

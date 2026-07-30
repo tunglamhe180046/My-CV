@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,102 +19,446 @@
             --section-spacing: 4rem;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Roboto', sans-serif; line-height: 1.6; color: var(--text-color); background-color: var(--bg-color); }
-        a { text-decoration: none; color: inherit; }
-
-        /* --- Header --- */
-        header { background-color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 1000; }
-        nav { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary-color); }
-        .nav-links { display: flex; gap: 2rem; }
-        .nav-links a { font-weight: 500; color: var(--text-color); transition: color 0.3s; }
-        .nav-links a:hover { color: var(--primary-color); }
-        .menu-toggle { display: none; font-size: 1.5rem; cursor: pointer; }
-
-        /* --- Hero --- */
-        .hero { margin-top: 80px; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; padding: 4rem 2rem; text-align: center; }
-        .hero-content { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 1.5rem; }
-        .avatar-placeholder { width: 150px; height: 150px; background-color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 4rem; color: var(--primary-color); border: 4px solid rgba(255,255,255,0.3); margin-bottom: 1rem; overflow: hidden; }
-        .avatar-img { width: 100%; height: 100%; object-fit: cover; }
-        .hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; text-transform: uppercase; }
-        .hero h2 { font-size: 1.2rem; font-weight: 300; opacity: 0.9; }
-        .contact-info { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-top: 1rem; font-size: 0.9rem; }
-        .contact-item { display: flex; align-items: center; gap: 0.5rem; }
-
-        .btn-download { margin-top: 2rem; padding: 0.8rem 2rem; background-color: white; color: var(--primary-color); border-radius: 50px; font-weight: 600; transition: transform 0.2s, box-shadow 0.2s; cursor: pointer; border: none; font-family: inherit; font-size: 1rem; display: inline-flex; align-items: center; gap: 0.5rem; }
-        .btn-download:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
-
-        /* --- Main --- */
-        main { max-width: 1200px; margin: 0 auto; padding: 2rem; }
-        section { margin-bottom: var(--section-spacing); }
-
-        @media screen {
-            section { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
-            section.visible { opacity: 1; transform: translateY(0); }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .section-title { font-size: 1.8rem; color: var(--primary-color); margin-bottom: 2rem; position: relative; padding-bottom: 0.5rem; page-break-after: avoid; break-after: avoid; }
-        .section-title::after { content: ''; position: absolute; bottom: 0; left: 0; width: 50px; height: 3px; background-color: var(--primary-color); }
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
 
-        .about-text { font-size: 1.1rem; color: #475569; text-align: justify; }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* --- Header --- */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-color);
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* --- Hero --- */
+        .hero {
+            margin-top: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .avatar-placeholder {
+            width: 150px;
+            height: 150px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--primary-color);
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .avatar-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .hero h2 {
+            font-size: 1.2rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-download {
+            margin-top: 2rem;
+            padding: 0.8rem 2rem;
+            background-color: white;
+            color: var(--primary-color);
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-download:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* --- Main --- */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: var(--section-spacing);
+        }
+
+        @media screen {
+            section {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            }
+
+            section.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+            page-break-after: avoid;
+            break-after: avoid;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            color: #475569;
+            text-align: justify;
+        }
 
         /* --- Skills --- */
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
-        .skill-category { background: var(--card-bg); padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-left: 4px solid var(--primary-color); page-break-inside: avoid; break-inside: avoid; }
-        .skill-category h3 { margin-bottom: 1rem; font-size: 1.2rem; display: flex; align-items: center; gap: 0.5rem; }
-        .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-        .tag { background-color: #e2e8f0; color: #475569; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.9rem; font-weight: 500; }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .skill-category {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--primary-color);
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        .skill-category h3 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background-color: #e2e8f0;
+            color: #475569;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
 
         /* --- Timeline --- */
-        .timeline { position: relative; padding-left: 2rem; border-left: 2px solid #cbd5e1; }
-        .timeline-item { margin-bottom: 2rem; position: relative; page-break-inside: avoid; break-inside: avoid; }
-        .timeline-item::before { content: ''; position: absolute; left: -2.6rem; top: 0.5rem; width: 1rem; height: 1rem; background-color: var(--primary-color); border-radius: 50%; border: 3px solid white; }
-        .timeline-content { background: var(--card-bg); padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .time { font-size: 0.9rem; color: #64748b; font-weight: 500; margin-bottom: 0.5rem; display: block; }
-        .role { font-size: 1.2rem; font-weight: 700; color: var(--text-color); }
-        .company { font-size: 1rem; color: var(--primary-color); font-weight: 600; margin-bottom: 1rem; }
-        .timeline-content ul { list-style-position: inside; color: #475569; }
-        .timeline-content ul li { margin-bottom: 0.3rem; }
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+            border-left: 2px solid #cbd5e1;
+        }
+
+        .timeline-item {
+            margin-bottom: 2rem;
+            position: relative;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.6rem;
+            top: 0.5rem;
+            width: 1rem;
+            height: 1rem;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+
+        .timeline-content {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .time {
+            font-size: 0.9rem;
+            color: #64748b;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .role {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-color);
+        }
+
+        .company {
+            font-size: 1rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-content ul {
+            list-style-position: inside;
+            color: #475569;
+        }
+
+        .timeline-content ul li {
+            margin-bottom: 0.3rem;
+        }
 
         /* --- Projects --- */
-        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .project-card { background: var(--card-bg); border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.3s; display: flex; flex-direction: column; page-break-inside: avoid; break-inside: avoid; }
-        .project-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
-        .project-body { padding: 1.5rem; flex-grow: 1; }
-        .project-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-color); }
-        .project-tech { margin-bottom: 1rem; color: var(--primary-color); font-size: 0.9rem; font-weight: 500; }
-        .project-desc { font-size: 0.95rem; color: #475569; margin-bottom: 1rem; }
-        .project-link { display: inline-block; margin-top: auto; color: var(--primary-color); font-weight: 600; transition: opacity 0.3s; }
-        .project-link:hover { opacity: 0.8; text-decoration: underline; }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
 
-        footer { background-color: #1e293b; color: white; text-align: center; padding: 3rem 1rem; page-break-inside: avoid; break-inside: avoid; }
-        .social-links { margin-top: 1rem; display: flex; justify-content: center; gap: 1.5rem; }
-        .social-links a { font-size: 1.5rem; transition: color 0.3s; }
-        .social-links a:hover { color: var(--primary-color); }
+        .project-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-body {
+            padding: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .project-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        .project-tech {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .project-desc {
+            font-size: 0.95rem;
+            color: #475569;
+            margin-bottom: 1rem;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: auto;
+            color: var(--primary-color);
+            font-weight: 600;
+            transition: opacity 0.3s;
+        }
+
+        .project-link:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #1e293b;
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        .social-links {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .social-links a {
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-color);
+        }
 
         @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .menu-toggle { display: block; }
-            .hero h1 { font-size: 2rem; }
-            .timeline { padding-left: 1.5rem; }
-            .timeline-item::before { left: -2.05rem; }
+            .nav-links {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .timeline {
+                padding-left: 1.5rem;
+            }
+
+            .timeline-item::before {
+                left: -2.05rem;
+            }
         }
 
         /* --- PDF MODE: Styles CHUYÊN BIỆT cho việc in ấn --- */
         /* Chế độ này sẽ được bật bằng Javascript khi bấm nút Tải */
-        body.pdf-mode header { display: none; } /* Ẩn menu */
-        body.pdf-mode { background-color: white; font-size: 14px; } /* Giảm cỡ chữ cơ bản */
+        body.pdf-mode header {
+            display: none;
+        }
+
+        /* Ẩn menu */
+        body.pdf-mode {
+            background-color: white;
+            font-size: 14px;
+        }
+
+        /* Giảm cỡ chữ cơ bản */
 
         body.pdf-mode .hero {
             margin-top: 0;
-            padding: 1.5rem 1rem; /* Thu gọn header */
-            text-align: left; /* Canh trái cho giống CV truyền thống hơn */
+            padding: 1.5rem 1rem;
+            /* Thu gọn header */
+            text-align: left;
+            /* Canh trái cho giống CV truyền thống hơn */
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
         }
+
         body.pdf-mode .hero-content {
             flex-direction: row;
             align-items: center;
@@ -121,15 +466,51 @@
             max-width: 100%;
             margin: 0;
         }
-        body.pdf-mode .hero h1 { font-size: 2rem; margin-bottom: 0.2rem; }
-        body.pdf-mode .hero h2 { font-size: 1.1rem; }
-        body.pdf-mode .contact-info { justify-content: flex-start; margin-top: 0.5rem; gap: 1rem; }
-        body.pdf-mode .avatar-placeholder { width: 100px; height: 100px; margin-bottom: 0; font-size: 2.5rem; border-width: 2px; }
 
-        body.pdf-mode main { padding: 1rem 2rem; }
-        body.pdf-mode section { margin-bottom: 1.5rem; } /* Giảm khoảng cách giữa các mục */
-        body.pdf-mode .section-title { font-size: 1.4rem; margin-bottom: 1rem; border-bottom: 2px solid var(--primary-color); padding-bottom: 0.2rem; }
-        body.pdf-mode .section-title::after { display: none; } /* Bỏ gạch chân kiểu cũ */
+        body.pdf-mode .hero h1 {
+            font-size: 2rem;
+            margin-bottom: 0.2rem;
+        }
+
+        body.pdf-mode .hero h2 {
+            font-size: 1.1rem;
+        }
+
+        body.pdf-mode .contact-info {
+            justify-content: flex-start;
+            margin-top: 0.5rem;
+            gap: 1rem;
+        }
+
+        body.pdf-mode .avatar-placeholder {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 0;
+            font-size: 2.5rem;
+            border-width: 2px;
+        }
+
+        body.pdf-mode main {
+            padding: 1rem 2rem;
+        }
+
+        body.pdf-mode section {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Giảm khoảng cách giữa các mục */
+        body.pdf-mode .section-title {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.2rem;
+        }
+
+        body.pdf-mode .section-title::after {
+            display: none;
+        }
+
+        /* Bỏ gạch chân kiểu cũ */
 
         /* Fix lỗi vệt trắng: Bỏ shadow, dùng border */
         body.pdf-mode .skill-category,
@@ -140,315 +521,453 @@
             padding: 1rem;
         }
 
-        body.pdf-mode .timeline-item { margin-bottom: 1rem; }
-        body.pdf-mode .skills-grid { gap: 1rem; }
-        body.pdf-mode .projects-grid { gap: 1rem; }
+        body.pdf-mode .timeline-item {
+            margin-bottom: 1rem;
+        }
 
-        body.pdf-mode footer { padding: 1rem; background-color: white; color: var(--text-color); border-top: 1px solid #eee; }
-        body.pdf-mode .social-links a { font-size: 1.2rem; }
+        body.pdf-mode .skills-grid {
+            gap: 1rem;
+        }
+
+        body.pdf-mode .projects-grid {
+            gap: 1rem;
+        }
+
+        body.pdf-mode footer {
+            padding: 1rem;
+            background-color: white;
+            color: var(--text-color);
+            border-top: 1px solid #eee;
+        }
+
+        body.pdf-mode .social-links a {
+            font-size: 1.2rem;
+        }
 
         /* Ẩn các nút không cần thiết khi in */
         body.pdf-mode .btn-download,
-        body.pdf-mode .menu-toggle { display: none !important; }
-
+        body.pdf-mode .menu-toggle {
+            display: none !important;
+        }
     </style>
 </head>
+
 <body>
 
-<header>
-    <nav>
-        <div class="logo">TungLam.Dev</div>
-        <div class="nav-links">
-            <a href="#about">Giới thiệu</a>
-            <a href="#skills">Kỹ năng</a>
-            <a href="#experience">Kinh nghiệm</a>
-            <a href="#projects">Dự án</a>
-            <a href="#education">Học vấn</a>
-        </div>
-        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
-    </nav>
-</header>
-
-<div id="cv-content">
-    <section class="hero">
-        <div class="hero-content">
-            <div class="avatar-placeholder">
-                <img src="anh.jpg" alt="Nguyễn Tùng Lâm" class="avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                <i class="fas fa-user" style="display: none;"></i>
+    <header>
+        <nav>
+            <div class="logo">TungLam.Dev</div>
+            <div class="nav-links">
+                <a href="#about">Giới thiệu</a>
+                <a href="#skills">Kỹ năng</a>
+                <a href="#experience">Kinh nghiệm</a>
+                <a href="#projects">Dự án</a>
+                <a href="#education">Học vấn</a>
             </div>
-            <div style="text-align: left;">
-                <h1>NGUYỄN TÙNG LÂM</h1>
-                <h2>Kĩ Sư Phần Mềm (Software Engineer)</h2>
-                <div class="contact-info">
-                    <div class="contact-item"><i class="fas fa-envelope"></i> tunglam07678@gmail.com</div>
-                    <div class="contact-item"><i class="fas fa-phone"></i> 0985 469 702</div>
-                    <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Hà Nội</div>
-                    <div class="contact-item"><i class="fas fa-calendar-alt"></i> 12/08/2004</div>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        </nav>
+    </header>
+
+    <div id="cv-content">
+        <section class="hero">
+            <div class="hero-content">
+                <div class="avatar-placeholder">
+                    <img src="anh.jpg" alt="Nguyễn Tùng Lâm" class="avatar-img"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <i class="fas fa-user" style="display: none;"></i>
                 </div>
-            </div>
+                <div style="text-align: center;">
+                    <h1>NGUYỄN TÙNG LÂM</h1>
+                    <h2>Full-stack Software Engineer Intern | AI-assisted Developer</h2>
+                    <div class="contact-info">
+                        <div class="contact-item"><i class="fas fa-envelope"></i> tunglam07678@gmail.com</div>
+                        <div class="contact-item"><i class="fas fa-phone"></i> 0985 469 702</div>
+                        <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Hà Nội</div>
+                        <div class="contact-item"><i class="fas fa-calendar-alt"></i> 12/08/2004</div>
+                    </div>
+                </div>
 
-            <button onclick="generatePDF()" class="btn-download" data-html2canvas-ignore="true">
-                <i class="fas fa-file-pdf"></i> Tải CV (PDF)
-            </button>
-        </div>
-    </section>
-
-    <main>
-        <section id="about">
-            <h2 class="section-title">Mục Tiêu Nghề Nghiệp</h2>
-            <div class="about-text">
-                <p>
-                    Với nền tảng kỹ thuật vững chắc về lập trình (Java, C#, ReactJS) cùng khả năng giao tiếp tiếng Nhật (JLPT N4),
-                    tôi mong muốn trở thành cầu nối hiệu quả giữa đội ngũ kỹ thuật và khách hàng Nhật Bản.
-                    Mục tiêu của tôi là góp phần nâng cao chất lượng sản phẩm, gia tăng sự hài lòng của khách hàng
-                    và mở rộng quan hệ hợp tác quốc tế.
-                </p>
+                <button onclick="generatePDF()" class="btn-download" data-html2canvas-ignore="true">
+                    <i class="fas fa-file-pdf"></i> Tải CV (PDF)
+                </button>
             </div>
         </section>
 
-        <section id="skills">
-            <h2 class="section-title">Kỹ Năng Chuyên Môn</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Front-end</h3>
-                    <div class="tags">
-                        <span class="tag">HTML/CSS</span>
-                        <span class="tag">ReactJS</span>
-                        <span class="tag">Vue.js</span>
-                        <span class="tag">Bootstrap</span>
-                        <span class="tag">Ant Design</span>
+        <main>
+            <section id="about">
+                <h2 class="section-title">Giới Thiệu Bản Thân</h2>
+                <div class="about-text">
+                    <p>
+                        Kỹ sư phần mềm định hướng <strong>Full-stack Development</strong>, có nền tảng Java, C#, ReactJS, SQL
+                        và kinh nghiệm thực tập trong môi trường phần mềm thực tế. Điểm mạnh nổi bật của tôi là khả năng
+                        tìm hiểu, thử nghiệm và xây dựng <strong>AI workflow</strong> để hỗ trợ phát triển phần mềm —
+                        không chỉ sử dụng AI như công cụ hỏi đáp mà còn biến AI thành trợ lý kỹ thuật giúp đọc tài liệu,
+                        phân tích yêu cầu, hỗ trợ viết code, tối ưu prompt/context và rút ngắn thời gian xử lý task.
+                    </p>
+                    <p style="margin-top: 0.8rem;">
+                        Tôi có tinh thần cầu tiến, khả năng giao tiếp tốt và luôn kiên trì khi gặp vấn đề kỹ thuật.
+                        Tôi mong muốn phát triển theo hướng lập trình viên fullstack có khả năng kết hợp kỹ năng kỹ thuật,
+                        tư duy sản phẩm và <strong>AI-assisted workflow</strong> để nâng cao năng suất làm việc cho đội nhóm
+                        và doanh nghiệp.
+                    </p>
+                </div>
+            </section>
+
+            <section id="skills">
+                <h2 class="section-title">Kỹ Năng Chuyên Môn</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-layer-group"></i> Programming & Frameworks</h3>
+                        <div class="tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">C#</span>
+                            <span class="tag">.NET</span>
+                            <span class="tag">ReactJS</span>
+                            <span class="tag">HTML / CSS</span>
+                            <span class="tag">Android Java</span>
+                            <span class="tag">Android C#</span>
+                            <span class="tag">iOS C#</span>
+                            <span class="tag">Unity</span>
+                            <span class="tag">PHP (cơ bản)</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><i class="fas fa-database"></i> Database & Tools</h3>
+                        <div class="tags">
+                            <span class="tag">SQL</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">SQL Server</span>
+                            <span class="tag">SQLite</span>
+                            <span class="tag">Redis (cơ bản)</span>
+                            <span class="tag">Git / GitHub</span>
+                            <span class="tag">Bitbucket</span>
+                            <span class="tag">Jira</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><i class="fas fa-robot"></i> AI-assisted Development</h3>
+                        <div class="tags">
+                            <span class="tag">Claude Code</span>
+                            <span class="tag">Cursor</span>
+                            <span class="tag">Codex (OpenAI)</span>
+                            <span class="tag">Antigravity</span>
+                            <span class="tag">ChatGPT</span>
+                            <span class="tag">Gemini</span>
+                            <span class="tag">GitHub Copilot</span>
+                            <span class="tag">Prompt Engineering</span>
+                            <span class="tag">Context Engineering</span>
+                            <span class="tag">Token Optimization</span>
+                            <span class="tag">AI-assisted Debugging</span>
+                            <span class="tag">AI-assisted SQL</span>
+                            <span class="tag">AI Workflow Design</span>
+                            <span class="tag">MCP Integration</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><i class="fas fa-users-cog"></i> Workflow & Soft Skills</h3>
+                        <div class="tags">
+                            <span class="tag">Requirement Analysis</span>
+                            <span class="tag">Technical Documentation</span>
+                            <span class="tag">Task Breakdown</span>
+                            <span class="tag">Jira Log Work</span>
+                            <span class="tag">Team Communication</span>
+                            <span class="tag">Problem Solving</span>
+                            <span class="tag">Automation Testing</span>
+                            <span class="tag">Kiên trì / Không bỏ cuộc</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><i class="fas fa-language"></i> Languages</h3>
+                        <div class="tags">
+                            <span class="tag">Tiếng Nhật (JLPT N4)</span>
+                            <span class="tag">Tiếng Anh (IELTS 6.5)</span>
+                        </div>
                     </div>
                 </div>
+            </section>
 
-                <div class="skill-category">
-                    <h3><i class="fas fa-server"></i> Back-end</h3>
-                    <div class="tags">
-                        <span class="tag">Java</span>
-                        <span class="tag">Android Java</span>
-                        <span class="tag">C# / .NET</span>
-                    </div>
-                </div>
+            <section id="experience">
+                <h2 class="section-title">Kinh Nghiệm Làm Việc</h2>
+                <div class="timeline">
 
-                <div class="skill-category">
-                    <h3><i class="fas fa-database"></i> Database & Tools</h3>
-                    <div class="tags">
-                        <span class="tag">MySQL</span>
-                        <span class="tag">SQL Server</span>
-                        <span class="tag">SQLite</span>
-                        <span class="tag">Git/Github</span>
-                        <span class="tag">Jira</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3><i class="fas fa-language"></i> Ngoại ngữ & Khác</h3>
-                    <div class="tags">
-                        <span class="tag">Tiếng Nhật (N4)</span>
-                        <span class="tag">Tiếng Anh (IELTS 5.5)</span>
-                        <span class="tag">Làm việc nhóm</span>
-                        <span class="tag">Chịu áp lực cao</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience">
-            <h2 class="section-title">Kinh Nghiệm Làm Việc</h2>
-            <div class="timeline">
-
-                <div class="timeline-item">
-                    <span class="time">09/2024 - 12/2024</span>
-                    <div class="timeline-content">
-                        <h3 class="role">Thực Tập Sinh</h3>
-                        <div class="company">FPT Software Nhật Bản</div>
-                        <ul>
-                            <li>Được đi thực tập 3 tháng tại Nhật Bản, sinh hoạt và làm việc trực tiếp với người bản xứ.</li>
-                            <li>Tham gia phát triển phần mềm (Low Tech & Coding), trải nghiệm văn hóa doanh nghiệp Nhật Bản.</li>
-                            <li>Tham gia các hội thảo phát triển và hướng nghiệp kỹ sư Nhật Bản.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <span class="time">09/2024 - 12/2024</span>
-                    <div class="timeline-content">
-                        <h3 class="role">Thực Tập Sinh .NET</h3>
-                        <div class="company">NIC Global Company</div>
-                        <ul>
-                            <li>Được đào tạo bài bản theo quy trình chuẩn Nhật Bản.</li>
-                            <li>Sử dụng thành thạo ngôn ngữ C#, .NET Framework.</li>
-                            <li>Đọc hiểu và xử lý tài liệu kỹ thuật tiếng Nhật.</li>
-                            <li>Ứng dụng AI của công ty để tối ưu hóa 30% thời gian xử lý công việc.</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="projects">
-            <h2 class="section-title">Dự Án Nổi Bật</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-body">
-                        <h3 class="project-title">JLPT Learning App (TamaNihon)</h3>
-                        <div class="project-tech">Android Java • SQLite</div>
-                        <div class="project-desc">
+                    <div class="timeline-item">
+                        <span class="time">01/2026 - 08/2026</span>
+                        <div class="timeline-content">
+                            <h3 class="role">AI-assisted App Developer Intern</h3>
+                            <div class="company">Kaopiz Software</div>
                             <ul>
-                                <li><strong>Vai trò:</strong> Trưởng nhóm.</li>
-                                <li>Thiết kế cơ sở dữ liệu và kiến trúc ứng dụng.</li>
-                                <li>Tham gia viết tài liệu phân tích dự án.</li>
-                                <li>Phát triển các tính năng học từ vựng, ngữ pháp tiếng Nhật.</li>
+                                <li>Được đào tạo chuyên sâu về ứng dụng AI trong phát triển phần mềm, bao gồm bảo mật khi sử dụng AI, thiết kế workflow, viết prompt, tối ưu context/token, so sánh điểm mạnh giữa các model và tích hợp nhiều nền tảng AI vào quy trình làm việc.</li>
+                                <li>Tham gia xây dựng và thử nghiệm <strong>AI workflow</strong> hỗ trợ quá trình phát triển app, từ phân tích yêu cầu, chia nhỏ task, hỗ trợ viết UI/code, đọc tài liệu kỹ thuật đến kiểm tra logic đầu ra.</li>
+                                <li>Hỗ trợ thiết kế workflow và ý tưởng cho công cụ kết nối dự án <strong>Unity</strong> cũ với AI, giúp AI hiểu project context tốt hơn và hỗ trợ sửa lỗi, phát triển giao diện, xử lý logic nhanh hơn.</li>
+                                <li>Làm việc với <strong>Unity</strong> trong phát triển giao diện app, tham gia xử lý UI, luồng tương tác, logic màn hình và các task liên quan đến mảng App Front-end.</li>
+                                <li>Biết gọi API từ backend để lấy và chạy dữ liệu trên frontend.</li>
+                                <li>Thực hiện xử lý và hiển thị nội dung đa ngôn ngữ với 18 ngôn ngữ text khác nhau.</li>
+                                <li>Viết automation test cho unit test, flow test và UI test.</li>
+                                <li>Thành thạo sử dụng <strong>Git</strong> và <strong>Bitbucket</strong> trong quy trình phát triển.</li>
+                                <li>Sử dụng <strong>Jira</strong> để quản lý task, log work, theo dõi tiến độ và ghi nhận quá trình xử lý công việc trong môi trường thực tập thực tế.</li>
+                                <li>Góp phần vào workflow giúp duy trì số lượng task hoàn thành trong khi rút ngắn khoảng <strong>30%</strong> thời gian xử lý một số nhóm công việc nhờ áp dụng AI-assisted workflow.</li>
                             </ul>
                         </div>
-                        <a href="https://github.com/Trangpche170234/TamaNihon" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> Xem trên GitHub
-                        </a>
                     </div>
-                </div>
 
-                <div class="project-card">
-                    <div class="project-body">
-                        <h3 class="project-title">Hệ Thống Quản Lý Ký Túc Xá (DORM)</h3>
-                        <div class="project-tech">Spring Boot • ReactJS • MySQL</div>
-                        <div class="project-desc">
+                    <div class="timeline-item">
+                        <span class="time">08/2025 - 12/2025</span>
+                        <div class="timeline-content">
+                            <h3 class="role">.NET Intern</h3>
+                            <div class="company">NIC Global Company</div>
                             <ul>
-                                <li><strong>Vai trò:</strong> Trưởng nhóm.</li>
-                                <li>Thiết kế hệ thống và cơ sở dữ liệu.</li>
-                                <li>Xây dựng các API CRUD, xử lý các yêu cầu của sinh viên.</li>
-                                <li>Viết tài liệu phân tích nghiệp vụ và kỹ thuật.</li>
+                                <li>Thực tập trong môi trường phát triển phần mềm sử dụng <strong>C# / .NET</strong>, làm quen với quy trình xử lý yêu cầu, đọc tài liệu kỹ thuật và tham gia các task liên quan đến ứng dụng nội bộ.</li>
+                                <li>Tiếp cận và phân tích tài liệu kỹ thuật liên quan đến Flutter, XFS, requirement, UI design, API server và các luồng xử lý nghiệp vụ.</li>
+                                <li>Tìm hiểu các khái niệm kỹ thuật như Redis, trigger, import/execute flow, hook, subscribe và các bước xử lý trong hệ thống có nhiều thành phần kết nối.</li>
+                                <li>Ứng dụng AI để hỗ trợ đọc hiểu tài liệu kỹ thuật, phân tích flow, giải thích logic code, chia nhỏ vấn đề và tăng tốc quá trình học công nghệ mới.</li>
+                                <li>Rèn luyện khả năng làm việc với tài liệu phức tạp, giao tiếp trong môi trường doanh nghiệp và duy trì tiến độ khi gặp các vấn đề kỹ thuật chưa quen thuộc.</li>
                             </ul>
                         </div>
-                        <a href="https://github.com/SEP390/FE" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> Xem trên GitHub
-                        </a>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="time">09/2024 - 12/2024</span>
+                        <div class="timeline-content">
+                            <h3 class="role">Thực Tập Sinh</h3>
+                            <div class="company">FPT Software Nhật Bản</div>
+                            <ul>
+                                <li>Được đi thực tập 3 tháng tại Nhật Bản, sinh hoạt và làm việc trực tiếp với người bản
+                                    xứ.</li>
+                                <li>Tham gia phát triển phần mềm (Low Tech & Coding), trải nghiệm văn hóa doanh nghiệp
+                                    Nhật Bản.</li>
+                                <li>Tham gia các hội thảo phát triển và hướng nghiệp kỹ sư Nhật Bản.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="projects">
+                <h2 class="section-title">Dự Án Nổi Bật</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-body">
+                            <h3 class="project-title">JLPT Learning App (TamaNihon)</h3>
+                            <div class="project-tech">Android Java • SQLite</div>
+                            <div class="project-desc">
+                                <ul>
+                                    <li><strong>Vai trò:</strong> Trưởng nhóm.</li>
+                                    <li>Thiết kế cơ sở dữ liệu và kiến trúc ứng dụng.</li>
+                                    <li>Tham gia viết tài liệu phân tích dự án.</li>
+                                    <li>Phát triển các tính năng học từ vựng, ngữ pháp tiếng Nhật.</li>
+                                </ul>
+                            </div>
+                            <a href="https://github.com/Trangpche170234/TamaNihon" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Xem trên GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-body">
+                            <h3 class="project-title">Hệ Thống Quản Lý Ký Túc Xá (DORM)</h3>
+                            <div class="project-tech">Spring Boot • ReactJS • MySQL</div>
+                            <div class="project-desc">
+                                <ul>
+                                    <li><strong>Vai trò:</strong> Trưởng nhóm.</li>
+                                    <li>Thiết kế hệ thống và cơ sở dữ liệu.</li>
+                                    <li>Xây dựng các API CRUD, xử lý các yêu cầu của sinh viên.</li>
+                                    <li>Viết tài liệu phân tích nghiệp vụ và kỹ thuật.</li>
+                                </ul>
+                            </div>
+                            <a href="https://github.com/SEP390/FE" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Xem trên GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-body">
+                            <h3 class="project-title">Job Scan — Job Discovery & Matching Toolkit</h3>
+                            <div class="project-tech">Python • Playwright • Pandas • Rich</div>
+                            <div class="project-desc">
+                                <ul>
+                                    <li>Phát triển công cụ hỗ trợ thu thập công ty từ ITviec và TopCV, xác định website chính thức và xuất báo cáo Excel/CSV.</li>
+                                    <li>Xây dựng workflow lọc và chấm điểm job theo hồ sơ ứng viên; hỗ trợ tìm tin tuyển dụng từ trang công ty hoặc trang careers.</li>
+                                    <li>Tích hợp trợ lý ứng tuyển bán tự động: tạo Cover Letter theo vị trí, hỗ trợ điền form và giữ bước nộp đơn cuối cùng cho người dùng xác nhận.</li>
+                                    <li>Thiết kế workflow agent-ready, có thể kết hợp Codex, Claude và Antigravity để hỗ trợ phân tích, review báo cáo, tài liệu và cải thiện workflow dưới sự kiểm duyệt của người dùng.</li>
+                                </ul>
+                            </div>
+                            <a href="https://github.com/tunglamhe180046/job-scan" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Xem trên GitHub
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="education">
-            <h2 class="section-title">Học Vấn & Chứng Chỉ</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <span class="time">10/2022 - 12/2025</span>
-                    <div class="timeline-content">
-                        <h3 class="role">Cử Nhân Kỹ Thuật Phần Mềm</h3>
-                        <div class="company">Đại Học FPT</div>
-                        <p>Tốt nghiệp loại Khá.</p>
+            <section id="education">
+                <h2 class="section-title">Học Vấn & Chứng Chỉ</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="time">10/2022 - 12/2025</span>
+                        <div class="timeline-content">
+                            <h3 class="role">Cử Nhân Kỹ Thuật Phần Mềm</h3>
+                            <div class="company">Đại Học FPT</div>
+                            <p>Tốt nghiệp loại Khá.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="time">Chứng chỉ</span>
+                        <div class="timeline-content">
+                            <h3 class="role">Chứng Chỉ Ngoại Ngữ</h3>
+                            <ul>
+                                <li><strong>JLPT N4</strong> (2025)</li>
+                                <li><strong>IELTS 6.5</strong> (2022)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="time">Chứng chỉ</span>
+                        <div class="timeline-content">
+                            <h3 class="role">Google AI Certificate</h3>
+                            <ul>
+                                <li><strong>Google AI Essentials</strong> — Chứng chỉ chuyên về ứng dụng AI trong công
+                                    việc, bao gồm sử dụng công cụ AI, viết prompt hiệu quả và tích hợp AI vào quy trình
+                                    làm việc.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="time">04/2026</span>
+                        <div class="timeline-content">
+                            <h3 class="role">AI Passport</h3>
+                            <div class="company">Kaopiz Software</div>
+                            <ul>
+                                <li>Pass <strong>2 lần</strong> kỳ thi <strong>AI Passport</strong> — Chứng chỉ đánh giá năng lực ứng dụng trí tuệ nhân tạo trong công việc và cuộc sống.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="time">04/2026</span>
+                        <div class="timeline-content">
+                            <h3 class="role">Chứng Chỉ An Toàn Thông Tin</h3>
+                            <div class="company">Kaopiz Software</div>
+                            <ul>
+                                <li>Đạt <strong>điểm tối đa</strong> chứng chỉ <strong>An Toàn Thông Tin</strong> do Kaopiz Software cấp — Chứng nhận kiến thức về bảo mật thông tin, bảo vệ dữ liệu và an toàn khi sử dụng AI trong môi trường doanh nghiệp.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <span class="time">Chứng chỉ</span>
-                    <div class="timeline-content">
-                        <h3 class="role">Chứng Chỉ Ngoại Ngữ</h3>
-                        <ul>
-                            <li><strong>JLPT N4</strong> (2025)</li>
-                            <li><strong>IELTS 5.5</strong> (2022)</li>
-                        </ul>
-                    </div>
+                <h3 style="margin-top: 2rem; color: var(--primary-color);">Hoạt Động Ngoại Khóa</h3>
+                <div style="margin-top: 1rem; background: white; padding: 1.5rem; border-radius: 8px;">
+                    <ul style="padding-left: 1.5rem; color: #475569;">
+                        <li><strong>CLB Muay Thái (10/2022 - 08/2024):</strong> Rèn luyện thể lực và tinh thần đồng đội.
+                        </li>
+                        <li><strong>Tình nguyện viên Hội thảo BRSE (08/2024):</strong> Hỗ trợ tổ chức, gặp gỡ khách mời,
+                            tìm hiểu về nghề Kỹ sư cầu nối.</li>
+                    </ul>
                 </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="logo" style="color: white; margin-bottom: 1rem;">Nguyễn Tùng Lâm</div>
+            <p>Kết nối với tôi</p>
+            <div class="social-links">
+                <a href="https://web.facebook.com/nguyen.tung.lam.992075" target="_blank"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/nguyen-lam-9a1568375" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="mailto:tunglam07678@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
             </div>
+            <p style="margin-top: 2rem; font-size: 0.8rem; opacity: 0.7;">© 2026 Nguyen Tung Lam Portfolio. All rights
+                reserved.</p>
+        </footer>
+    </div>
 
-            <h3 style="margin-top: 2rem; color: var(--primary-color);">Hoạt Động Ngoại Khóa</h3>
-            <div style="margin-top: 1rem; background: white; padding: 1.5rem; border-radius: 8px;">
-                <ul style="padding-left: 1.5rem; color: #475569;">
-                    <li><strong>CLB Muay Thái (10/2022 - 08/2024):</strong> Rèn luyện thể lực và tinh thần đồng đội.</li>
-                    <li><strong>Tình nguyện viên Hội thảo BRSE (08/2024):</strong> Hỗ trợ tổ chức, gặp gỡ khách mời, tìm hiểu về nghề Kỹ sư cầu nối.</li>
-                </ul>
-            </div>
-        </section>
-
-    </main>
-
-    <footer>
-        <div class="logo" style="color: white; margin-bottom: 1rem;">Nguyễn Tùng Lâm</div>
-        <p>Kết nối với tôi</p>
-        <div class="social-links">
-            <a href="https://web.facebook.com/nguyen.tung.lam.992075" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.linkedin.com/in/nguyen-lam-9a1568375" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:tunglam07678@gmail.com"><i class="fas fa-envelope"></i></a>
-            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-        </div>
-        <p style="margin-top: 2rem; font-size: 0.8rem; opacity: 0.7;">© 2026 Nguyen Tung Lam Portfolio. All rights reserved.</p>
-    </footer>
-</div>
-
-<script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
-    });
 
-    const observerOptions = { threshold: 0.2 };
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+        const observerOptions = { threshold: 0.2 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '70px';
+                navLinks.style.right = '0';
+                navLinks.style.backgroundColor = 'white';
+                navLinks.style.width = '100%';
+                navLinks.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
+                navLinks.style.padding = '1rem';
             }
         });
-    }, observerOptions);
 
-    document.querySelectorAll('section').forEach(section => {
-        observer.observe(section);
-    });
+        function generatePDF() {
+            const element = document.getElementById('cv-content');
 
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
+            // 1. Bật chế độ PDF Mode: Tự động thu gọn giao diện, bỏ shadow
+            document.body.classList.add('pdf-mode');
 
-    menuToggle.addEventListener('click', () => {
-        if (navLinks.style.display === 'flex') {
-            navLinks.style.display = 'none';
-        } else {
-            navLinks.style.display = 'flex';
-            navLinks.style.flexDirection = 'column';
-            navLinks.style.position = 'absolute';
-            navLinks.style.top = '70px';
-            navLinks.style.right = '0';
-            navLinks.style.backgroundColor = 'white';
-            navLinks.style.width = '100%';
-            navLinks.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
-            navLinks.style.padding = '1rem';
+            // Tạm thời hiển thị hết các section để chụp ảnh (tắt hiệu ứng fade-in)
+            document.querySelectorAll('section').forEach(el => {
+                el.classList.add('visible');
+                el.style.opacity = '1';
+                el.style.transform = 'none';
+            });
+
+            const opt = {
+                margin: [0.2, 0, 0.2, 0], // Lề nhỏ hơn để tiết kiệm giấy
+                filename: 'Lam-Lam-CV.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: {
+                    scale: 2, // Giữ độ nét cao
+                    scrollY: 0,
+                    useCORS: true,
+                    windowHeight: element.scrollHeight
+                },
+                jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' },
+                pagebreak: { mode: ['css', 'legacy'] }
+            };
+
+            // 2. Tạo PDF xong thì tắt chế độ PDF Mode để web trở lại bình thường
+            html2pdf().set(opt).from(element).save().then(() => {
+                document.body.classList.remove('pdf-mode');
+            });
         }
-    });
-
-    function generatePDF() {
-        const element = document.getElementById('cv-content');
-
-        // 1. Bật chế độ PDF Mode: Tự động thu gọn giao diện, bỏ shadow
-        document.body.classList.add('pdf-mode');
-
-        // Tạm thời hiển thị hết các section để chụp ảnh (tắt hiệu ứng fade-in)
-        document.querySelectorAll('section').forEach(el => {
-            el.classList.add('visible');
-            el.style.opacity = '1';
-            el.style.transform = 'none';
-        });
-
-        const opt = {
-            margin:       [0.2, 0, 0.2, 0], // Lề nhỏ hơn để tiết kiệm giấy
-            filename:     'Lam-Lam-CV.pdf',
-            image:        { type: 'jpeg', quality: 0.98 },
-            html2canvas:  {
-                scale: 2, // Giữ độ nét cao
-                scrollY: 0,
-                useCORS: true,
-                windowHeight: element.scrollHeight
-            },
-            jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' },
-            pagebreak:    { mode: ['css', 'legacy'] }
-        };
-
-        // 2. Tạo PDF xong thì tắt chế độ PDF Mode để web trở lại bình thường
-        html2pdf().set(opt).from(element).save().then(() => {
-            document.body.classList.remove('pdf-mode');
-        });
-    }
-</script>
+    </script>
 </body>
+
 </html>
