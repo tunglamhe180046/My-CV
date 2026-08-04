@@ -373,9 +373,15 @@
             margin-bottom: 1rem;
         }
 
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1.25rem;
+            margin-top: auto;
+        }
+
         .project-link {
             display: inline-block;
-            margin-top: auto;
             color: var(--primary-color);
             font-weight: 600;
             transition: opacity 0.3s;
@@ -801,6 +807,30 @@
                             <a href="https://github.com/tunglamhe180046/job-scan" target="_blank" class="project-link">
                                 <i class="fab fa-github"></i> Xem trên GitHub
                             </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-body">
+                            <h3 class="project-title">Hero Lab — Superhero Generator</h3>
+                            <div class="project-tech">Next.js 16 • React 19 + TypeScript • Cloudflare Workers AI • Sharp</div>
+                            <div class="project-desc">
+                                <ul>
+                                    <li>Xây dựng ứng dụng full-stack biến ảnh chân dung (upload hoặc chụp trực tiếp từ camera) thành ảnh siêu anh hùng bằng Cloudflare Workers AI (FLUX.2 Klein 4B), giữ nguyên khuôn mặt gốc.</li>
+                                    <li>Tích hợp Google Gemini API để tối ưu hóa prompt người dùng thành mô tả điện ảnh chuyên nghiệp; khi ảnh bị chặn bởi bộ lọc nội dung/an toàn của model, tự động dùng Gemini phân tích lỗi, viết lại prompt an toàn hơn và gửi lại request để sinh ảnh thành công.</li>
+                                    <li>Phát triển backend bằng Next.js Route Handlers, chuẩn hóa ảnh đầu vào và ghép tên nhân vật lên ảnh kết quả bằng Sharp và overlay SVG.</li>
+                                    <li>Xây dựng hệ thống log có cấu trúc (thời gian request, prompt/config, HTTP status, latency, lỗi) phục vụ debug và giám sát.</li>
+                                    <li>Xử lý các edge case: giới hạn dung lượng ảnh, MIME type không hỗ trợ, timeout provider, quyền truy cập camera.</li>
+                                </ul>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://superhero-generator-tau.vercel.app/" target="_blank" class="project-link">
+                                    <i class="fas fa-globe"></i> Live Demo
+                                </a>
+                                <a href="https://github.com/tunglamhe180046/superhero-generator" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i> Xem trên GitHub
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
