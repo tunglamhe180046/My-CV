@@ -47,7 +47,10 @@
         li { margin:4px 0; }
         .project { padding:16px 18px; margin-bottom:12px; border:1px solid var(--line); border-radius:8px; background:#fbfcff; break-inside:avoid; page-break-inside:avoid; }
         .project p { margin:7px 0 0; color:#3f4a5c; font-size:13px; }
-        .project a { display:inline-block; margin-top:9px; color:var(--blue); font-size:13px; font-weight:600; }
+        .project ul { margin:7px 0 0; padding-left:18px; color:#3f4a5c; font-size:13px; }
+        .project li { margin:3px 0; }
+        .project .links { margin-top:9px; display:flex; flex-wrap:wrap; gap:4px 16px; }
+        .project a { display:inline-block; color:var(--blue); font-size:13px; font-weight:600; }
         .education { margin-bottom:13px; break-inside:avoid; page-break-inside:avoid; }
         .education p { margin:3px 0 0; color:#3f4a5c; font-size:13px; }
         footer { padding:17px 54px; background:#172033; color:#dce6f8; font-size:12px; display:flex; justify-content:space-between; }
@@ -131,10 +134,54 @@
 
                     <section>
                         <h2>Projects</h2>
-                        <article class="project"><h3>JLPT Learning App (TamaNihon)</h3><div class="sub">Android Java · SQLite</div><p><strong>Team Lead.</strong> Designed the database and application architecture, contributed to project-analysis documentation, and developed Japanese vocabulary and grammar learning features.</p><a href="https://github.com/Trangpche170234/TamaNihon" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> View on GitHub</a></article>
-                        <article class="project"><h3>DORM — Dormitory Management System</h3><div class="sub">Spring Boot · ReactJS · MySQL</div><p><strong>Team Lead.</strong> Designed the system and database, built CRUD APIs for student-related requirements, and prepared business and technical analysis documents.</p><a href="https://github.com/SEP390/FE" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> View on GitHub</a></article>
-                        <article class="project"><h3>Job Scan — Job Discovery & Matching Toolkit</h3><div class="sub">Python · Playwright · pandas · Rich</div><p>Built an interactive, human-in-the-loop toolkit that collects company data from ITviec and TopCV, identifies candidate official websites, scores relevant vacancies, and exports Excel/CSV reports. Added a semi-automated application assistant that generates tailored cover-letter drafts and fills supported fields while keeping final submission under user control. Designed the workflow to be agent-ready, so Codex, Claude, and Antigravity can assist with analysis, report review, documentation, and workflow improvement under human review.</p><a href="https://github.com/tunglamhe180046/job-scan" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> View on GitHub</a></article>
-                        <article class="project"><h3>Hero Lab — Superhero Generator</h3><div class="sub">Next.js 16 · React 19 + TypeScript · Cloudflare Workers AI · Sharp</div><p>Built a full-stack app that turns an uploaded or camera-captured portrait into an original cinematic superhero image while preserving facial likeness, using Cloudflare Workers AI (FLUX.2 Klein 4B). Integrated the Google Gemini API to enhance user prompts into professional cinematic descriptions, and to automatically re-analyze and rewrite the prompt into a safer version when the image model rejected it for content/safety policy, resubmitting the request to complete generation. Implemented the backend with Next.js Route Handlers, normalized input images and composited the hero name onto the output with Sharp and an SVG overlay. Added structured system logging (request time, prompt/config, provider HTTP status, latency, errors) and handled edge cases such as file-size limits, unsupported MIME types, provider timeouts, and camera permission errors.</p><a href="https://superhero-generator-tau.vercel.app/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> Live Demo</a> <a href="https://github.com/tunglamhe180046/superhero-generator" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> View on GitHub</a></article>
+                        <article class="project">
+                            <h3>JLPT Learning App (TamaNihon)</h3>
+                            <div class="sub">Android Java · SQLite</div>
+                            <ul>
+                                <li><strong>Role:</strong> Team Lead.</li>
+                                <li>Designed the database and application architecture.</li>
+                                <li>Contributed to project-analysis documentation.</li>
+                                <li>Developed Japanese vocabulary and grammar learning features.</li>
+                            </ul>
+                            <div class="links"><a href="https://github.com/Trangpche170234/TamaNihon" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> View on GitHub</a></div>
+                        </article>
+                        <article class="project">
+                            <h3>DORM — Dormitory Management System</h3>
+                            <div class="sub">Spring Boot · ReactJS · MySQL</div>
+                            <ul>
+                                <li><strong>Role:</strong> Team Lead.</li>
+                                <li>Designed the system architecture and database.</li>
+                                <li>Built CRUD APIs to handle student-related requests.</li>
+                                <li>Wrote business and technical analysis documentation.</li>
+                            </ul>
+                            <div class="links"><a href="https://github.com/SEP390/FE" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> View on GitHub</a></div>
+                        </article>
+                        <article class="project">
+                            <h3>Job Scan — Job Discovery & Matching Toolkit</h3>
+                            <div class="sub">Python · Playwright · pandas · Rich</div>
+                            <ul>
+                                <li>Built a tool that collects company data from ITviec and TopCV, identifies official websites, and exports Excel/CSV reports.</li>
+                                <li>Built a workflow to filter and score jobs against a candidate profile; helps locate postings on company or careers pages.</li>
+                                <li>Integrated a semi-automated application assistant: generates tailored cover letters per role, helps fill forms, and keeps final submission under user control.</li>
+                                <li>Designed an agent-ready workflow so Codex, Claude, and Antigravity can assist with analysis, report review, documentation, and workflow improvement under human review.</li>
+                            </ul>
+                            <div class="links"><a href="https://github.com/tunglamhe180046/job-scan" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> View on GitHub</a></div>
+                        </article>
+                        <article class="project">
+                            <h3>Hero Lab — Superhero Generator</h3>
+                            <div class="sub">Next.js 16 · React 19 + TypeScript · Cloudflare Workers AI · Sharp</div>
+                            <ul>
+                                <li>Built a full-stack app that turns an uploaded or camera-captured portrait into an original cinematic superhero image using Cloudflare Workers AI (FLUX.2 Klein 4B), preserving facial likeness.</li>
+                                <li>Integrated the Google Gemini API to enhance user prompts into professional cinematic descriptions; when the image model rejected a prompt for content/safety policy, automatically used Gemini to re-analyze the error, rewrite a safer prompt, and resubmit the request to complete generation.</li>
+                                <li>Implemented the backend with Next.js Route Handlers, normalized input images, and composited the hero name onto the output with Sharp and an SVG overlay.</li>
+                                <li>Built structured system logging (request time, prompt/config, provider HTTP status, latency, errors) for debugging and monitoring.</li>
+                                <li>Handled edge cases: file-size limits, unsupported MIME types, provider timeouts, and camera permission errors.</li>
+                            </ul>
+                            <div class="links">
+                                <a href="https://superhero-generator-tau.vercel.app/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> Live Demo</a>
+                                <a href="https://github.com/tunglamhe180046/superhero-generator" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> View on GitHub</a>
+                            </div>
+                        </article>
                     </section>
 
                     <section>
