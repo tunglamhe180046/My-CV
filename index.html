@@ -77,6 +77,39 @@
             color: var(--primary-color);
         }
 
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .lang-select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-color: #f1f5f9;
+            color: var(--text-color);
+            padding: 0.45rem 2rem 0.45rem 0.9rem;
+            border-radius: 20px;
+            border: 1px solid #cbd5e1;
+            font-size: 0.88rem;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%232563eb%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.7rem center;
+            background-size: 0.65rem auto;
+        }
+
+        .lang-select:hover, .lang-select:focus {
+            border-color: var(--primary-color);
+            background-color: #ffffff;
+            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
+            outline: none;
+        }
+
         .menu-toggle {
             display: none;
             font-size: 1.5rem;
@@ -552,6 +585,7 @@
 
         /* Ẩn các nút không cần thiết khi in */
         body.pdf-mode .btn-download,
+        body.pdf-mode .lang-switcher,
         body.pdf-mode .menu-toggle {
             display: none !important;
         }
@@ -570,7 +604,15 @@
                 <a href="#projects">Dự án</a>
                 <a href="#education">Học vấn</a>
             </div>
-            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+            <div class="nav-right">
+                <div class="lang-switcher">
+                    <select onchange="if(this.value) window.location.href=this.value;" class="lang-select" title="Chuyển đổi ngôn ngữ / Switch Language">
+                        <option value="index.html" selected>🇻🇳 Tiếng Việt</option>
+                        <option value="cv-en.html">🇬🇧 English</option>
+                    </select>
+                </div>
+                <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+            </div>
         </nav>
     </header>
 

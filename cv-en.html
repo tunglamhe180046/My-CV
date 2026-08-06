@@ -53,9 +53,29 @@
         .project a { display:inline-block; color:var(--blue); font-size:13px; font-weight:600; }
         .education { margin-bottom:13px; break-inside:avoid; page-break-inside:avoid; }
         .education p { margin:3px 0 0; color:#3f4a5c; font-size:13px; }
+        .header-actions { display:flex; flex-direction:column; gap:10px; align-items:flex-end; }
+        .lang-select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-color: rgba(255,255,255,0.15);
+            color: #ffffff;
+            padding: 6px 28px 6px 12px;
+            border-radius: 6px;
+            border: 1px solid rgba(255,255,255,0.5);
+            font: 600 13px Inter, sans-serif;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+            background-repeat: no-repeat;
+            background-position: right 8px center;
+            background-size: 10px auto;
+        }
+        .lang-select option { background-color: #173f9c; color: #ffffff; }
+        .lang-select:hover { background-color: #ffffff; color: var(--blue-dark); }
         footer { padding:17px 54px; background:#172033; color:#dce6f8; font-size:12px; display:flex; justify-content:space-between; }
-        @media (max-width:760px) { .page { margin:0; } .top { padding:34px 24px; grid-template-columns:84px 1fr; gap:18px; } .photo { width:84px; height:84px; } h1 { font-size:29px; } .download { grid-column:1/-1; justify-self:start; } main { padding:30px 24px; } .layout { grid-template-columns:1fr; gap:0; } footer { padding:16px 24px; flex-direction:column; gap:4px; } }
-        @media print { body { background:#fff; } .page { margin:0; max-width:none; box-shadow:none; } .download { display:none; } }
+        @media (max-width:760px) { .page { margin:0; } .top { padding:34px 24px; grid-template-columns:84px 1fr; gap:18px; } .photo { width:84px; height:84px; } h1 { font-size:29px; } .download, .header-actions { grid-column:1/-1; justify-self:start; align-items:flex-start; } main { padding:30px 24px; } .layout { grid-template-columns:1fr; gap:0; } footer { padding:16px 24px; flex-direction:column; gap:4px; } }
+        @media print { body { background:#fff; } .page { margin:0; max-width:none; box-shadow:none; } .download, .header-actions { display:none; } }
     </style>
 </head>
 <body>
@@ -72,7 +92,13 @@
                     <span><i class="fa-brands fa-linkedin"></i> linkedin.com/in/nguyen-lam-9a1568375</span>
                 </div>
             </div>
-            <button class="download" onclick="generatePDF()"><i class="fa-solid fa-file-pdf"></i> Download PDF</button>
+            <div class="header-actions" data-html2canvas-ignore="true">
+                <select onchange="if(this.value) window.location.href=this.value;" class="lang-select" title="Switch Language">
+                    <option value="index.html">🇻🇳 Tiếng Việt</option>
+                    <option value="cv-en.html" selected>🇬🇧 English</option>
+                </select>
+                <button class="download" type="button" onclick="generatePDF()"><i class="fa-solid fa-file-pdf"></i> Download PDF</button>
+            </div>
         </header>
 
         <main>
@@ -198,8 +224,15 @@
     </div>
     <script>
         function generatePDF() {
+            const downloadButton = document.querySelector('.download');
+            const originalDisplay = downloadButton.style.display;
+            downloadButton.style.display = 'none';
+
             const options = { margin: 0, filename: 'Nguyen-Tung-Lam-CV-English.pdf', image: { type: 'jpeg', quality: 0.98 }, html2canvas: { scale: 2, useCORS: true }, jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }, pagebreak: { mode: ['css', 'legacy'] } };
-            html2pdf().set(options).from(document.getElementById('cv-content')).save();
+            html2pdf().set(options).from(document.getElementById('cv-content')).save().then(
+                () => { downloadButton.style.display = originalDisplay; },
+                () => { downloadButton.style.display = originalDisplay; }
+            );
         }
     </script>
 </body>
