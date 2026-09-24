@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Nguyễn Tùng Lâm | Trung Tâm Quản Lý & Xuất CV Đa Mẫu</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,8 +15,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <!-- HTML2PDF -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    <!-- Single Source of Truth CV Data -->
-    <script src="cv-data.js"></script>
+    <script>
+        // Tự động dọn dẹp các bản lưu tạm thời cũ trong trình duyệt để luôn hiển thị dữ liệu mới nhất
+        try {
+            for (let i = localStorage.length - 1; i >= 0; i--) {
+                const k = localStorage.key(i);
+                if (k && k.startsWith("nguyen_tung_lam_cv_data")) {
+                    localStorage.removeItem(k);
+                }
+            }
+        } catch(e) {}
+    </script>
+    <!-- Single Source of Truth CV Data (Cache Busted) -->
+    <script src="cv-data.js?v=20260925_0059"></script>
 
     <style>
         /* Reset & Base */

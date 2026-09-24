@@ -12,6 +12,7 @@
  */
 
 const DEFAULT_CV_DATA = {
+    version: "2026-09-25-v7",
     personal: {
         name: {
             vi: "NGUYỄN TÙNG LÂM",
@@ -358,14 +359,18 @@ const DEFAULT_CV_DATA = {
 const rootScope = typeof window !== 'undefined' ? window : (typeof globalThis !== 'undefined' ? globalThis : this);
 
 rootScope.CVDataService = {
-    STORAGE_KEY: "nguyen_tung_lam_cv_data_v6",
+    STORAGE_KEY: "nguyen_tung_lam_cv_data_v7",
 
     get: function() {
         try {
             const saved = (typeof localStorage !== 'undefined') ? localStorage.getItem(this.STORAGE_KEY) : null;
             if (saved) {
                 const parsed = JSON.parse(saved);
-                return Object.assign(JSON.parse(JSON.stringify(DEFAULT_CV_DATA)), parsed);
+                if (parsed && parsed.version === DEFAULT_CV_DATA.version && Array.isArray(parsed.projects) && parsed.projects.length >= DEFAULT_CV_DATA.projects.length) {
+                    return Object.assign(JSON.parse(JSON.stringify(DEFAULT_CV_DATA)), parsed);
+                } else if (typeof localStorage !== 'undefined') {
+                    localStorage.removeItem(this.STORAGE_KEY);
+                }
             }
         } catch (e) {
             console.warn("Could not load from localStorage, using default CV data:", e);
@@ -406,7 +411,7 @@ const DEFAULT_CV_DATA = ${JSON.stringify(data, null, 4)};
 const rootScope = typeof window !== 'undefined' ? window : (typeof globalThis !== 'undefined' ? globalThis : this);
 
 rootScope.CVDataService = {
-    STORAGE_KEY: "nguyen_tung_lam_cv_data_v6",
+    STORAGE_KEY: "nguyen_tung_lam_cv_data_v7",
 
     get: function() {
         try {
