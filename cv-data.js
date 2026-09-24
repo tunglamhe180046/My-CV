@@ -222,6 +222,52 @@ const DEFAULT_CV_DATA = {
             }
         },
         {
+            id: "word-tools",
+            name: {
+                vi: "Word Tools — Hạ Tầng Phẫu Thuật Tài Liệu Word (.docx) Tại Chỗ Cho AI Agent",
+                en: "Word Tools — Surgical In-Place DOCX Manipulation Engine for AI Agents"
+            },
+            period: "2026",
+            tech: "Python, OpenXML, lxml (XPath / C14N), python-docx, TypeScript, Node.js, PyMuPDF, Pytest",
+            github: "https://github.com/tunglamhe180046/word-tools",
+            githubDisplay: "github.com/tunglamhe180046/word-tools",
+            highlights: {
+                vi: [
+                    "Xây dựng engine phẫu thuật tài liệu Word (.docx) tại chỗ (Profile 1 - Surgical In-Place) cho AI Agent: trực tiếp sửa ô bảng, đoạn văn và kiểu dáng mà không cần sinh lại file từ đầu, bảo toàn nguyên vẹn 100% định dạng OpenXML phức tạp và nội dung người dùng sửa tay.",
+                    "Thiết kế cơ chế khóa lạc quan (Optimistic Lock) & Lưới an toàn chống mất dữ liệu (Anti-Drift Guardrail): kiểm tra mã băm document_revision và context_sha256, tự động dừng an toàn (fail-closed) khi phát hiện xung đột sửa đổi ngoài Word.",
+                    "Cung cấp CLI chuẩn hóa với đầu ra JSON có cấu trúc (inspect, patch-cell, patch-text, set-geometry, stamp-ops, backups/restore) và Client Adapter bất đồng bộ cho TypeScript / Node.js; tích hợp 123 bài kiểm thử tự động với pytest."
+                ],
+                en: [
+                    "Engineered an in-place DOCX surgical modification engine (Profile 1 - Surgical In-Place) for AI Agents: performs direct updates on table cells, paragraphs, and styles without regenerating entire files, preserving 100% of complex OpenXML formats and human manual edits.",
+                    "Designed optimistic locking and anti-drift guardrails: validates cryptographic document_revision and context_sha256 hashes, failing closed safely upon detecting out-of-band manual edits in Microsoft Word.",
+                    "Provided a production CLI with structured JSON outputs (inspect, patch-cell, patch-text, set-geometry, stamp-ops, backups/restore) alongside an async TypeScript/Node.js client adapter; backed by 123 automated pytest test suites."
+                ]
+            }
+        },
+        {
+            id: "google-maps-radar",
+            name: {
+                vi: "Google Maps Radar — Hệ Thống Tình Báo Không Gian Đa Phương Thức & Multi-Agent",
+                en: "Google Maps Radar — Multimodal Spatial Profiling & Multi-Agent Intelligence System"
+            },
+            period: "2026",
+            tech: "Python, Multimodal Vision LLMs, Adaptive Quadtree Grid, SQLite, Token Bucket Rate Limiter, Pytest",
+            github: "https://github.com/tunglamhe180046/google-maps-radar",
+            githubDisplay: "github.com/tunglamhe180046/google-maps-radar",
+            highlights: {
+                vi: [
+                    "Phát triển pipeline quét không gian thông minh ứng dụng thuật toán lưới thích ứng Quadtree: tự động phân mảnh bán kính quét theo mật độ quán, khắc phục giới hạn hiển thị của Google Maps kết hợp cơ chế Token Bucket Rate Limiter chống khóa IP.",
+                    "Tích hợp Multimodal Spatial Profiling: ứng dụng Vision LLM phân tích hình ảnh và đánh giá văn bản đa phương thức để gắn nhãn cảm quan không gian (Quiet Focus, Cozy Creative...), tự động tính toán chi phí trước và cache SQLite nội bộ.",
+                    "Xây dựng tính năng Building Tenant Radar tự động lập danh bạ doanh nghiệp/tổ chức thuê địa điểm theo tòa nhà (trích xuất tầng, lĩnh vực, website, email HR) và hệ thống bộ nhớ phiên làm việc cô lập (Session Isolation) theo kiến trúc SSOT."
+                ],
+                en: [
+                    "Architected an intelligent spatial scanning pipeline leveraging Adaptive Quadtree Grid algorithms to dynamically subdivide scan radiuses by density, bypassing Google Maps RPC limits with Token Bucket Rate Limiting and exponential backoff.",
+                    "Integrated Multimodal Spatial Profiling: deployed Vision LLMs to analyze interior photos and text reviews to label workspace vibes (Quiet Focus, Cozy Creative), featuring dry-run cost estimation and SQLite caching.",
+                    "Built a Building Tenant Radar to automatically map corporate tenants per high-rise building (extracting floors, tech domains, websites, HR emails) alongside a session-isolated SSOT memory architecture."
+                ]
+            }
+        },
+        {
             id: "job-scan",
             name: {
                 vi: "Job Scan — Bộ Công Cụ Thu Thập & Đối Chiếu Việc Làm Tự Động",
@@ -312,7 +358,7 @@ const DEFAULT_CV_DATA = {
 const rootScope = typeof window !== 'undefined' ? window : (typeof globalThis !== 'undefined' ? globalThis : this);
 
 rootScope.CVDataService = {
-    STORAGE_KEY: "nguyen_tung_lam_cv_data_v5",
+    STORAGE_KEY: "nguyen_tung_lam_cv_data_v6",
 
     get: function() {
         try {
@@ -360,7 +406,7 @@ const DEFAULT_CV_DATA = ${JSON.stringify(data, null, 4)};
 const rootScope = typeof window !== 'undefined' ? window : (typeof globalThis !== 'undefined' ? globalThis : this);
 
 rootScope.CVDataService = {
-    STORAGE_KEY: "nguyen_tung_lam_cv_data_v5",
+    STORAGE_KEY: "nguyen_tung_lam_cv_data_v6",
 
     get: function() {
         try {
