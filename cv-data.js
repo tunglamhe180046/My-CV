@@ -12,7 +12,7 @@
  */
 
 const DEFAULT_CV_DATA = {
-    version: "2026-09-25-v7",
+    version: "2026-09-25-v8",
     personal: {
         name: {
             vi: "NGUYỄN TÙNG LÂM",
@@ -64,10 +64,10 @@ const DEFAULT_CV_DATA = {
 
     experience: [
         {
-            id: "minh-bach",
+            id: "minh-bao",
             company: {
-                vi: "CÔNG TY CỔ PHẦN MINH BẠCH",
-                en: "MINH BACH JSC"
+                vi: "CÔNG TY DU HỌC MINH BẢO",
+                en: "MINH BAO STUDY ABROAD CO., LTD"
             },
             location: {
                 vi: "Hà Nội, Việt Nam",
@@ -359,7 +359,7 @@ const DEFAULT_CV_DATA = {
 const rootScope = typeof window !== 'undefined' ? window : (typeof globalThis !== 'undefined' ? globalThis : this);
 
 rootScope.CVDataService = {
-    STORAGE_KEY: "nguyen_tung_lam_cv_data_v7",
+    STORAGE_KEY: "nguyen_tung_lam_cv_data_v8",
 
     get: function() {
         try {
@@ -411,7 +411,7 @@ const DEFAULT_CV_DATA = ${JSON.stringify(data, null, 4)};
 const rootScope = typeof window !== 'undefined' ? window : (typeof globalThis !== 'undefined' ? globalThis : this);
 
 rootScope.CVDataService = {
-    STORAGE_KEY: "nguyen_tung_lam_cv_data_v7",
+    STORAGE_KEY: "nguyen_tung_lam_cv_data_v8",
 
     get: function() {
         try {
