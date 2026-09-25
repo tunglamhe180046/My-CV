@@ -12,7 +12,7 @@
  */
 
 const DEFAULT_CV_DATA = {
-    version: "2026-09-25-v8",
+    version: "2026-09-25-v9",
     personal: {
         name: {
             vi: "NGUYỄN TÙNG LÂM",
@@ -120,19 +120,18 @@ const DEFAULT_CV_DATA = {
             },
             highlights: {
                 vi: [
-                    "Được đào tạo bài bản và ứng dụng thực tế bảo mật AI, thiết kế AI workflow, tối ưu context/token và kết hợp đa model AI trong phát triển phần mềm.",
-                    "Xây dựng và kiểm thử các workflow tích hợp AI hỗ trợ phân tích yêu cầu, chia nhỏ task, phát triển UI/Code và review tài liệu kỹ thuật, giúp giảm bớt ~30% thời gian xử lý các nhóm công việc chính.",
-                    "Nghiên cứu kết nối dự án Unity với AI agent, hỗ trợ AI hiểu project context để tối ưu quá trình phát triển UI, màn hình tương tác và sửa lỗi logic.",
-                    "Xử lý và hiển thị nội dung đa ngôn ngữ cho ứng dụng trên 18 ngôn ngữ quốc tế.",
-                    "Viết các kịch bản Automation Test cho Unit Test, Flow Test và UI Test đảm bảo chất lượng phần mềm.",
-                    "Thành thạo sử dụng Git, Bitbucket và Jira trong quy trình làm việc thực tế của doanh nghiệp."
+                    "Trực tiếp lập trình và phát triển tính năng ứng dụng trên nền tảng Unity (C#): thiết kế giao diện UI Canvas, xây dựng màn hình tương tác, xử lý animation, quản lý state và tối ưu hóa vòng đời ứng dụng.",
+                    "Debug và sửa lỗi logic, tối ưu hiệu năng render và bộ nhớ cho các module chức năng trong dự án Unity.",
+                    "Nghiên cứu kết nối dự án Unity với AI Agent, cung cấp context cấu trúc mã nguồn để AI hỗ trợ sinh code giao diện, kiểm thử logic và tăng tốc ~30% tiến độ phát triển.",
+                    "Xây dựng pipeline xử lý và hiển thị nội dung đa ngôn ngữ cho ứng dụng Unity hỗ trợ 18 ngôn ngữ quốc tế.",
+                    "Viết kịch bản Automation Test (Unit Test, Flow Test, UI Test) và thực hành Git, Bitbucket, Jira theo quy trình Agile chuẩn doanh nghiệp."
                 ],
                 en: [
-                    "Designed and implemented production AI workflows supporting requirements decomposition, UI/code generation, technical document auditing, and output verification, reducing task processing time by ~30%.",
-                    "Built AI context integration pipelines for legacy Unity applications, allowing developer agents to accurately index project state, debug screen logic, and implement frontend interactions.",
-                    "Engineered multi-language content localization rendering pipelines supporting 18 international languages.",
-                    "Wrote automated unit tests, UI component tests, and application flow tests to enforce reliability across release cycles.",
-                    "Leveraged Jira, Git, and Bitbucket in an Agile team setting while maintaining strict AI security and data privacy standards."
+                    "Directly programmed and developed interactive application features in Unity (C#): implemented UI Canvas components, screen navigation, animations, state management, and application lifecycle logic.",
+                    "Debugged screen logic, resolved runtime defects, and optimized rendering/memory performance for core Unity application modules.",
+                    "Pioneered AI agent integration pipelines for Unity projects, feeding codebase context to LLMs to automate UI code generation, test logic, and accelerate feature delivery by ~30%.",
+                    "Engineered localization data pipelines in Unity supporting seamless rendering across 18 international languages.",
+                    "Developed automated test suites (Unit Test, Flow Test, UI Test) and collaborated via Git, Bitbucket, and Jira in an Agile workflow."
                 ]
             }
         },
@@ -359,7 +358,7 @@ const DEFAULT_CV_DATA = {
 const rootScope = typeof window !== 'undefined' ? window : (typeof globalThis !== 'undefined' ? globalThis : this);
 
 rootScope.CVDataService = {
-    STORAGE_KEY: "nguyen_tung_lam_cv_data_v8",
+    STORAGE_KEY: "nguyen_tung_lam_cv_data_v9",
 
     get: function() {
         try {
@@ -411,7 +410,7 @@ const DEFAULT_CV_DATA = ${JSON.stringify(data, null, 4)};
 const rootScope = typeof window !== 'undefined' ? window : (typeof globalThis !== 'undefined' ? globalThis : this);
 
 rootScope.CVDataService = {
-    STORAGE_KEY: "nguyen_tung_lam_cv_data_v8",
+    STORAGE_KEY: "nguyen_tung_lam_cv_data_v9",
 
     get: function() {
         try {
